@@ -7,7 +7,7 @@ uploadArchives {
         repository(url: "http://127.0.0.1:8081/repository/demo/") {
             authentication(userName: "admin", password: "admin123")
         }
-        pom.version = "1.0.3"
+        pom.version = "1.0.4"
         pom.artifactId = "automatic_sdk"
         pom.groupId = "com.yuto"
         pom.name = "automatic_sdk"
