@@ -1,19 +1,6 @@
 apply plugin: 'com.android.library'
 
-apply plugin: 'maven'
-uploadArchives {
-    repositories.mavenDeployer {
-        // 修改为自己刚才创建的仓库地址
-        repository(url: "http://127.0.0.1:8081/repository/demo/") {
-            authentication(userName: "admin", password: "admin123")
-        }
-        pom.version = "1.0.4"
-        pom.artifactId = "automatic_sdk"
-        pom.groupId = "com.yuto"
-        pom.name = "automatic_sdk"
-        pom.packaging = 'aar'
-    }
-}
+
 
 android {
     compileSdkVersion 28
@@ -47,3 +34,4 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
 
+apply from: './bintray.gradle'
